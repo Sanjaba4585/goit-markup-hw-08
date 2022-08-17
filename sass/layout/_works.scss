@@ -1,0 +1,33 @@
+.item-section {
+    display: flex;
+
+    .image {
+        margin-right: 30px;
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+}
+
+.img-text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    @include font($fw: 700, $fs: 14px);
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+    bottom: 0;
+}
