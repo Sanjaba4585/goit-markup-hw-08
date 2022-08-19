@@ -3,23 +3,23 @@
 @import './base/section';
 @import './utils/mixins';
 
-// @import './base/common';
+@import './base/common';
 @import './base/container';
-// @import './components/backdrope';
+@import './components/backdrope';
 
-// @import './components/modal-btn';
+@import './components/modal-btn';
 @import './components/contacts-list';
-// @import './components/subtitle';
-// @import './components/modal-window';
+@import './components/subtitle';
+@import './components/modal-window';
 
 @import './layout/site-nav';
 @import './layout/header';
 @import './layout/hero';
 @import './layout/feature';
 @import './layout/works';
-// @import './layout/command';
-// @import './layout/clients';
-// @import './layout/footer';
-// @import './layout/soclist-footer';
-// @import './layout/form';
+@import './layout/command';
+@import './layout/clients';
+@import './layout/footer';
+@import './layout/soclist-footer';
+@import './layout/form';
 // @import './layout/portfolio';

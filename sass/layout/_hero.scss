@@ -16,6 +16,10 @@
     background-position: center;
 
     &__title {
+        @media screen and (max-width: 1199px) {
+            @include font($fw: 900, $fs: 26px);
+            line-height: 1.62;
+        }
         max-width: 650px;
         color: var(--primary-white-color);
         @include font($fw: 900, $fs: 44px);

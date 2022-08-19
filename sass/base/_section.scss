@@ -1,11 +1,27 @@
 .section {
-    padding: 94px 0;
+    padding: 60px 0;
     margin-right: auto;
     margin-left: auto;
-}
 
-.section-works {
-    @media (max-width: 1199px) {
-        display: none;
+    &-works {
+        @media (max-width: 1199px) {
+            display: none;
+        }
+    }
+    &-feature {
+        @media (min-width: 1199px) {
+            display: inline-block;
+            padding: 94px 0;
+        }
+    }
+    &-command {
+        @media (min-width: 767px) {
+            display: inline-block;
+        }
+    }
+    &.client {
+        @media (min-width: 1200px) {
+            padding: 94px 0;
+        }
     }
 }
