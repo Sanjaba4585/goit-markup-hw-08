@@ -31,6 +31,11 @@
           </li>
         </ul>
       </nav>
+      <button type="button" class="mobile-menu-open" data-menu-open>
+        <svg class="mobile-menu-open__icon" width="40" height="40">
+          <use href="./images/svg/sprite modal.svg#burger-icon"></use>
+        </svg>
+      </button>
       <ul class="contacts-header">
         <li class="contacts-header__item">
           <a href="mailto:nfo@devstudio.com" class="contacts-header__link">
@@ -47,6 +52,44 @@
             +38 096 111 11 11</a>
         </li>
       </ul>
+    </div>
+    <div class="mobile-menu" data-menu>
+      <div class="container mobile-menu__container">
+        <button class="mobile-menu__close-btn" data-menu-close>
+          <svg class="mobile-menu__close-icon" width="19" height="19">
+            <use href="./images/svg/close.svg#icon-Vector-1"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu__title">
+          <li class="mobile-menu__item">
+            <a href="./index.html" class="mobile-menu__link">Студия</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="./portfolio.html" class="mobile-menu__link mobile-menu__link-current">Портфолио</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="./contact.html" class="mobile-menu__link">Контакты
+            </a>
+          </li>
+        </ul>
+        <ul class="mobile-menu__contacts">
+          <li class="mobile-menu__tel">
+            <a href="tel:+380961111111" class="mobile-menu__link mobile-menu__link-tel">+38 096 111 11
+              11</a>
+          </li>
+          <li class="mobile-menu__mail">
+            <a href="mailto:nfo@devstudio.com" class="mobile-menu__link mobile-menu__link-mail">nfo@devstudio.com</a>
+          </li>
+          <ul class="social-menu">
+            <li class="social-menu__item social-menu__item-border"><a href="" class="social-menu__link">Instagram</a>
+            </li>
+            <li class="social-menu__item social-menu__item-border"><a href="" class="social-menu__link">Twitter</a></li>
+            <li class="social-menu__item social-menu__item-border"><a href="" class="social-menu__link">Facebook</a>
+            </li>
+            <li class="social-menu__item"><a href="" class="social-menu__link">Linkedin</a></li>
+          </ul>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -67,7 +110,28 @@
           <li class="item-nav">
             <a href="" class="link wrap">
               <div class="box-wrap">
-                <img src="./images/portfolio/tehnokrak.jpg" alt="технокряк" width="370" />
+                <picture>
+                  <source
+                    srcset="./images/portfolio/desktop/webp/tehno-desk.webp 1x, ./images/portfolio/desktop/webp/tehno-desk@2x.webp 2x"
+                    media="(min-width: 1200px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/desktop/tehno-desk.jpg 1x, ./images/portfolio/desktop/webp/tehno-desk@2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/tehno-tab.webp 1x, ./images/portfolio/tab/webp/tehno-tab@2x.webp 2x"
+                    media="(min-width: 768px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/tehno-tab.jpg 1x, ./images/portfolio/tab/webp/tehno-tab@2x.jpg 2x"
+                    media="(min-width: 768px)" />
+                  <source
+                    srcset="./images/portfolio/mob/webp/tehnokrak-mob.webp, .images/portfolio/mob/webp/tehnokrak-mob@2x.webp "
+                    media="(max-width: 767px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/mob/tehnokrak-mob.jpg, ./images/portfolio/mob/tehnokrak-mob@2x.jpg "
+                    media="(max-width: 767px)" />
+                  <img src="./images/portfolio/tehnokrak.jpg" alt="технокряк" />
+                </picture>
+
                 <p class="text-wrap">Ресурс пропонує комплексні пропозиції
                   з різним рівнем функціоналу
                   та сервісів. Все це дозволить
@@ -84,8 +148,27 @@
           <li class="item-nav">
             <a href="" class="link wrap">
               <div class="box-wrap">
-                <img src="./images/portfolio/poster.jpg" alt="Постер New Orlean vs Golden Star" width="370"
-                  height="294" />
+                <picture>
+                  <source
+                    srcset="./images/portfolio/desktop/webp/star-desk.webp 1x, ./images/portfolio/desktop/webp/star-desk@2x.webp 2x"
+                    media="(min-width: 1200px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/desktop/star-desk.jpg 1x, ./images/portfolio/desktop/webp/star-desk@2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/star-tab.webp 1x, ./images/portfolio/tab/webp/star-tab@2x.webp 2x"
+                    media="(min-width: 768px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/star-tab.jpg 1x, ./images/portfolio/tab/webp/star-tab@2x.jpg 2x"
+                    media="(min-width: 768px)" />
+                  <source <source
+                    srcset="./images/portfolio/mob/webp/poster-mob.webp, .images/portfolio/mob/webp/poster-mob@2x.webp "
+                    media="(max-width: 767px)" type="image/webp" />
+                  <source srcset="./images/portfolio/poster-mob.jpg, ./images/portfolio/poster-mob@2x.jpg "
+                    media="(max-width: 767px)" />
+                  <img src="./images/portfolio/poster.jpg" alt="Постер New Orlean vs Golden Star" />
+                </picture>
+
                 <p class="text-wrap">Ресурс пропонує комплексні пропозиції
                   з різним рівнем функціоналу
                   та сервісів. Все це дозволить
@@ -101,7 +184,27 @@
           <li class="item-nav">
             <a href="" class="link wrap">
               <div class="box-wrap">
-                <img src="./images/portfolio/seafood.jpg" alt="Ресторан Seafood" width="370" height="294" />
+                <picture>
+                  <source
+                    srcset="./images/portfolio/desktop/webp/seafood-desk.webp 1x, ./images/portfolio/desktop/webp/seafood-desk@2x.webp 2x"
+                    media="(min-width: 1200px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/desktop/seafood-desk.jpg 1x, ./images/portfolio/desktop/webp/seafood-desk@2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/seafood-tab.webp 1x, ./images/portfolio/tab/webp/seafood-tab@2x.webp 2x"
+                    media="(min-width: 768px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/seafood-tab.jpg 1x, ./images/portfolio/tab/webp/seafood-tab@2x.jpg 2x"
+                    media="(min-width: 768px)" />
+                  <source
+                    srcset="./images/portfolio/mob/webp/seafood-mob.webp, .images/portfolio/mob/webp/seafood-mob@2x.webp "
+                    media="(max-width: 767px)" type="image/webp" />
+                  <source srcset="./images/portfolio/seafood-mob.jpg, ./images/portfolio/seafood-mob@2x.jpg "
+                    media="(max-width: 767px)" />
+                  <img src="./images/portfolio/seafood.jpg" alt="Ресторан Seafood" />
+                </picture>
+
                 <p class="text-wrap">Ресурс пропонує комплексні пропозиції
                   з різним рівнем функціоналу
                   та сервісів. Все це дозволить
@@ -117,7 +220,27 @@
           <li class="item-nav">
             <a href="" class="link wrap">
               <div class="box-wrap">
-                <img src="./images/portfolio/prime.jpg" alt="Проект Prime" width="370" height="294" />
+                <picture>
+                  <source
+                    srcset="./images/portfolio/desktop/webp/prime-desk.webp 1x, ./images/portfolio/desktop/webp/prime-desk@2x.webp 2x"
+                    media="(min-width: 1200px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/desktop/prime-desk.jpg 1x, ./images/portfolio/desktop/webp/prime-desk@2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/prime-tab.webp 1x, ./images/portfolio/tab/webp/prime-tab@2x.webp 2x"
+                    media="(min-width: 768px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/prime-tab.jpg 1x, ./images/portfolio/tab/webp/prime-tab@2x.jpg 2x"
+                    media="(min-width: 768px)" />
+                  <source
+                    srcset="./images/portfolio/mob/webp/prime-mob.webp, .images/portfolio/mob/webp/prime-mob@2x.webp "
+                    media="(max-width: 767px)" type="image/webp" />
+                  <source srcset="./images/portfolio/prime-mob.jpg, ./images/portfolio/prime-mob@2x.jpg "
+                    media="(max-width: 767px)" />
+                  <img src="./images/portfolio/prime.jpg" alt="Проект Prime" />
+                </picture>
+
                 <p class="text-wrap">Ресурс пропонує комплексні пропозиції
                   з різним рівнем функціоналу
                   та сервісів. Все це дозволить
@@ -133,7 +256,27 @@
           <li class="item-nav">
             <a href="" class="link wrap">
               <div class="box-wrap">
-                <img src="./images/portfolio/boxes.jpg" alt="Проект Boxes" width="370" height="294" />
+                <picture>
+                  <source
+                    srcset="./images/portfolio/desktop/webp/boxes-desk.webp 1x, ./images/portfolio/desktop/webp/boxes-desk@2x.webp 2x"
+                    media="(min-width: 1200px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/desktop/boxes-desk.jpg 1x, ./images/portfolio/desktop/webp/boxes-desk@2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/boxes-tab.webp 1x, ./images/portfolio/tab/webp/boxes-tab@2x.webp 2x"
+                    media="(min-width: 768px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/boxes-tab.jpg 1x, ./images/portfolio/tab/webp/boxes-tab@2x.jpg 2x"
+                    media="(min-width: 768px)" />
+                  <source
+                    srcset="./images/portfolio/mob/webp/boxes-mob.webp, .images/portfolio/mob/webp/boxes-mob@2x.webp "
+                    media="(max-width: 767px)" type="image/webp" />
+                  <source srcset="./images/portfolio/boxes-mob.jpg, ./images/portfolio/boxes-mob@2x.jpg "
+                    media="(max-width: 767px)" />
+                  <img src="./images/portfolio/boxes.jpg" alt="Проект Boxes" />
+                </picture>
+
                 <p class="text-wrap">Ресурс пропонує комплексні пропозиції
                   з різним рівнем функціоналу
                   та сервісів. Все це дозволить
@@ -149,7 +292,27 @@
           <li class="item-nav">
             <a href="" class="link wrap">
               <div class="box-wrap">
-                <img src="./images/portfolio/borders.jpg" alt="Inspiration has no Borders" width="370" height="294" />
+                <picture>
+                  <source
+                    srcset="./images/portfolio/desktop/webp/borders-desk.webp 1x, ./images/portfolio/desktop/webp/borders-desk@2x.webp 2x"
+                    media="(min-width: 1200px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/desktop/borders-desk.jpg 1x, ./images/portfolio/desktop/webp/borders-desk@2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/borders-tab.webp 1x, ./images/portfolio/tab/webp/borders-tab@2x.webp 2x"
+                    media="(min-width: 768px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/borders-tab.jpg 1x, ./images/portfolio/tab/webp/borders-tab@2x.jpg 2x"
+                    media="(min-width: 768px)" />
+                  <source
+                    srcset="./images/portfolio/mob/webp/borders-mob.webp, .images/portfolio/mob/webp/borders-mob@2x.webp"
+                    media="(max-width: 767px)" type="image/webp" />
+                  <source srcset="./images/portfolio/borders-mob.jpg, ./images/portfolio/borders-mob@2x.jpg "
+                    media="(max-width: 767px)" />
+                  <img src="./images/portfolio/borders.jpg" alt="Inspiration has no Borders" />
+                </picture>
+
                 <p class="text-wrap">Ресурс пропонує комплексні пропозиції
                   з різним рівнем функціоналу
                   та сервісів. Все це дозволить
@@ -165,7 +328,27 @@
           <li class="item-nav">
             <a href="" class="link wrap">
               <div class="box-wrap">
-                <img src="./images/portfolio/limited.jpg" alt="Издание Limited Edition" width="370" height="294" />
+                <picture>
+                  <source
+                    srcset="./images/portfolio/desktop/webp/edition-desk.webp 1x, ./images/portfolio/desktop/webp/edition-desk@2x.webp 2x"
+                    media="(min-width: 1200px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/desktop/edition-desk.jpg 1x, ./images/portfolio/desktop/webp/edition-desk@2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/edition-tab.webp 1x, ./images/portfolio/tab/webp/edition-tab@2x.webp 2x"
+                    media="(min-width: 768px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/edition-tab.jpg 1x, ./images/portfolio/tab/webp/edition-tab@2x.jpg 2x"
+                    media="(min-width: 768px)" />
+                  <source
+                    srcset="./images/portfolio/mob/webp/limited-mob.webp, .images/portfolio/mob/webp/limited-mob@2x.webp"
+                    media="(max-width: 767px)" type="image/webp" />
+                  <source srcset="./images/portfolio/limited-mob.jpg, ./images/portfolio/limited-mob@2x.jpg "
+                    media="(max-width: 767px)" />
+                  <img src="./images/portfolio/limited.jpg" alt="Издание Limited Edition" />
+                </picture>
+
                 <p class="text-wrap">Ресурс пропонує комплексні пропозиції
                   з різним рівнем функціоналу
                   та сервісів. Все це дозволить
@@ -181,7 +364,26 @@
           <li class="item-nav">
             <a href="" class="link wrap">
               <div class="box-wrap">
-                <img src="./images/portfolio/lab.jpg" alt="Проект LAB" width="370" height="294" />
+                <picture>
+                  <source
+                    srcset="./images/portfolio/desktop/webp/lab-desk.webp 1x, ./images/portfolio/desktop/webp/lab-desk@2x.webp 2x"
+                    media="(min-width: 1200px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/desktop/lab-desk.jpg 1x, ./images/portfolio/desktop/webp/lab-desk@2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/lab-tab.webp 1x, ./images/portfolio/tab/webp/lab-tab@2x.webp 2x"
+                    media="(min-width: 768px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/lab-tab.jpg 1x, ./images/portfolio/tab/webp/lab-tab@2x.jpg 2x"
+                    media="(min-width: 768px)" />
+                  <source srcset="./images/portfolio/mob/webp/lab-mob.webp, .images/portfolio/mob/webp/lab-mob@2x.webp"
+                    media="(max-width: 767px)" type="image/webp" />
+                  <source srcset="./images/portfolio/lab-mob.jpg, ./images/portfolio/lab-mob@2x.jpg "
+                    media="(max-width: 767px)" />
+                  <img src="./images/portfolio/lab.jpg" alt="Проект LAB" />
+                </picture>
+
                 <p class="text-wrap">Ресурс пропонує комплексні пропозиції
                   з різним рівнем функціоналу
                   та сервісів. Все це дозволить
@@ -197,7 +399,27 @@
           <li class="item-nav">
             <a href="" class="link wrap">
               <div class="box-wrap">
-                <img src=".//images/portfolio/busines.jpg" alt="Growing Business" width="370" height="294" />
+                <picture>
+                  <source
+                    srcset="./images/portfolio/desktop/webp/business-desk.webp 1x, ./images/portfolio/desktop/webp/business-desk@2x.webp 2x"
+                    media="(min-width: 1200px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/desktop/business-desk.jpg 1x, ./images/portfolio/desktop/webp/business-desk@2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/business-tab.webp 1x, ./images/portfolio/tab/webp/business-tab@2x.webp 2x"
+                    media="(min-width: 768px)" type="image/webp" />
+                  <source
+                    srcset="./images/portfolio/tab/webp/business-tab.jpg 1x, ./images/portfolio/tab/webp/business-tab@2x.jpg 2x"
+                    media="(min-width: 768px)" />
+                  <source
+                    srcset="./images/portfolio/mob/webp/busines-mob.webp, .images/portfolio/mob/webp/busines-mob@2x.webp"
+                    media="(max-width: 767px)" type="image/webp" />
+                  <source srcset="./images/portfolio/busines-mob.jpg, ./images/portfolio/busines-mob@2x.jpg "
+                    media="(max-width: 767px)" />
+                  <img src=".//images/portfolio/busines.jpg" alt="Growing Business" />
+                </picture>
+
                 <p class="text-wrap">Ресурс пропонує комплексні пропозиції
                   з різним рівнем функціоналу
                   та сервісів. Все це дозволить
@@ -235,34 +457,34 @@
             </li>
           </ul>
         </address>
-      </div>
 
+      </div>
       <div class="footer-social">
-        <h5 class="footer-title">присоединяйтесь</h5>
+        <b class="footer-title">присоединяйтесь</b>
         <ul class="soclist">
           <li class="socitem">
-            <a class=soclink>
+            <a class="soclink">
               <svg class="socicon" width="20" height="20">
                 <use href="./images/svg/Links.svg#icon-instagram-2"></use>
               </svg>
             </a>
           </li>
           <li class="socitem">
-            <a class=soclink>
+            <a class="soclink">
               <svg class="socicon" width="20" height="20">
                 <use href="./images/svg/Links.svg#icon-Vector-1"></use>
               </svg>
             </a>
           </li>
           <li class="socitem">
-            <a class=soclink>
+            <a class="soclink">
               <svg class="socicon" width="20" height="20">
                 <use href="./images/svg/Links.svg#icon-Vector"></use>
               </svg>
             </a>
           </li>
           <li class="socitem">
-            <a class=soclink>
+            <a class="soclink">
               <svg class="socicon" width="20" height="20">
                 <use href="./images/svg/Links.svg#icon-linkedin-1"></use>
               </svg>
@@ -271,9 +493,11 @@
         </ul>
       </div>
       <div class="footer-form">
-        <h5 class="footer-title">Подпишитесь на рассылку</h5>
+        <b class="footer-title">Подпишитесь на рассылку</b>
         <form class="online-form">
-          <input type="text" placeholder="E-mail" name="online-name" class="online-input" />
+          <label class="online-label">
+            <input type="email" placeholder="E-mail" name="email" class="online-input" />
+          </label>
           <button type="submit" class="online-button">
             Подписаться
             <svg class="online-icon" width="24" height="24">
@@ -282,8 +506,10 @@
           </button>
         </form>
       </div>
+
     </div>
   </footer>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

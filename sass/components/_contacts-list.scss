@@ -29,11 +29,16 @@
     @media (max-width: 767px) {
         display: none;
     }
-
+    @media (min-width: 1200px) {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        text-align: center;
+    }
     display: flex;
 
     &__item + &__item {
-        @media (min-width: 767px) {
+        @media (max-width: 1199px) {
             margin-top: 10px;
         }
         @media (min-width: 1199px) {

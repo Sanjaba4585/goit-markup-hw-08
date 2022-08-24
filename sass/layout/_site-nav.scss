@@ -27,10 +27,14 @@
         background-color: var(--accent-color);
         border-radius: 2px;
     }
+    @media screen and(min-width:1200px) {
+        &::after {
+            top: 67px;
+        }
+    }
 }
 
 .site-nav__link {
-    display: block;
     padding-top: 32px;
     padding-bottom: 32px;
 
