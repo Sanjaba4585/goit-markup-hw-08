@@ -58,24 +58,22 @@ body {
 }
 
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 480px) {
-  .container .container {
-    width: 480px;
-    margin-left: auto;
-    margin-right: auto;
+  .container {
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
-  .container .container {
-    width: 768px;
+  .container {
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .container .container {
-    width: 1200px;
+  .container {
+    max-width: 1200px;
   }
 }
 
@@ -250,6 +248,12 @@ body {
 }
 .contacts-header__link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (min-width: 1200px) {
+  .contacts-header__link {
+    font-size: 14px;
+    font-weight: 500;
+  }
 }
 
 .contacts-header {
@@ -546,11 +550,18 @@ textarea {
   border: 1px solid #ececec;
   padding-top: 15px;
   padding-bottom: 15px;
+  margin: 0 auto;
 }
 .page-header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (min-width: 1200px) {
+  .page-header {
+    max-width: 1200px;
+    border: none;
+  }
 }
 
 .main-nav {
@@ -624,6 +635,8 @@ textarea {
 @media screen and (min-width: 1200px) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(..//../images/desktop/hero-desk.jpg);
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 .hero__title {
@@ -725,6 +738,11 @@ textarea {
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .feature-list__title {
+    text-align: left;
+  }
 }
 .feature-list__text {
   font-size: 14px;
@@ -916,22 +934,18 @@ textarea {
   line-height: 1.17;
   text-align: center;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 768px) {
   .container.client {
-    color: var(--title-text-color);
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.18;
-    text-align: center;
+    max-width: 768px;
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .client-head {
     margin-bottom: 30px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .client-head {
     margin-bottom: 50px;
   }
@@ -939,34 +953,53 @@ textarea {
 
 .client-list {
   margin: -15px;
+  padding-left: 0;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .client-list {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .client-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client-list {
+    display: flex;
+    gap: 30px;
+    margin: 0;
     justify-content: center;
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .client-box {
-    width: 210px;
+    flex-basis: calc((100% - 30px) / 2);
+    width: 100%;
     height: 92px;
-    margin: 15px;
   }
 }
 @media screen and (min-width: 768px) {
   .client-box {
-    width: 226px;
+    flex-basis: calc((100% - 90px) / 3);
+    width: 100%;
     height: 92px;
-    margin: 15px;
   }
 }
 @media screen and (min-width: 1200px) {
   .client-box {
-    width: 170px;
+    flex-basis: calc((100% - 180px) / 6);
+    width: 100%;
     height: 92px;
-    margin: 15px;
   }
 }
 
@@ -1002,12 +1035,13 @@ footer {
   background-color: #2f303a;
   text-align: center;
 }
-
 @media screen and (min-width: 1200px) {
   footer {
     text-align: left;
+    margin: 0 auto;
   }
 }
+
 .container.footer {
   text-align: center;
 }
@@ -1026,41 +1060,39 @@ footer {
 }
 @media screen and (min-width: 1200px) {
   .container.footer {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
     text-align: left;
+    max-width: 1200px;
+    align-items: baseline;
   }
 }
-
-.footer-address {
+.container.footer .footer-address {
   margin-bottom: 60px;
 }
 @media screen and (min-width: 480px) {
-  .footer-address {
+  .container.footer .footer-address {
     text-align: center;
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer-address {
+  .container.footer .footer-address {
     margin-right: 70px;
     margin-bottom: 0;
+    text-align: left;
   }
 }
-
-.logo.footer {
+.container.footer .logo.footer {
   display: inline-block;
   margin-bottom: 20px;
 }
-
-span {
+.container.footer span {
   color: var(--primary-white-color);
 }
-
-.footer .link {
+.container.footer .footer .link {
   color: var(--primary-white-color);
 }
-
-.footer .link {
+.container.footer .footer .link {
   font-style: normal;
   font-size: 14px;
   font-weight: 400;
@@ -1068,17 +1100,15 @@ span {
   color: rgba(255, 255, 255, 0.6);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.footer .links :hover,
-.footer .links :focus {
+.container.footer .footer .links :hover,
+.container.footer .footer .links :focus {
   color: var(--accent-color);
 }
-
-.adress {
+.container.footer .adress {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 768px) {
   .footer-social {
     display: block;
     text-align: center;
@@ -1089,6 +1119,7 @@ span {
   .footer-social {
     margin-right: 90px;
     margin-bottom: 0;
+    text-align: left;
   }
 }
 
@@ -1148,14 +1179,16 @@ span {
 
 .online-label {
   display: block;
-  margin-left: 20px;
-  margin-top: 10px;
 }
 @media screen and (min-width: 1200px) {
   .online-label {
-    display: block;
     margin-right: 12px;
     margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .online-label {
+    margin-bottom: 20px;
   }
 }
 
@@ -1212,7 +1245,8 @@ span {
 .online-button {
   position: relative;
   display: block;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   min-width: 200px;
   min-height: 50px;
   border-radius: 4px;
@@ -1221,6 +1255,7 @@ span {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   padding-left: 29px;
+  padding-right: 29px;
   text-align: left;
   font-size: 16px;
   font-weight: 700;
@@ -1229,14 +1264,9 @@ span {
   color: var(--primary-white-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .online-button {
     margin-top: 20px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .online-button {
-    margin-top: 0;
   }
 }
 .online-button:hover {
@@ -1253,18 +1283,22 @@ span {
 @media screen and (min-width: 768px) {
   .footer-form {
     min-width: 450px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 
-@media screen and (min-width: 480px) {
-  .button {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 50px;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
+.footer-title .portfolio {
+  margin-bottom: 10px;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  row-gap: 15px;
+  flex-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
   .button {
@@ -1295,10 +1329,14 @@ span {
   margin-right: 0;
 }
 
-@media screen and (min-width: 768px) {
+.picture-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media screen and (min-width: 1200px) {
   .picture-nav {
-    display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .picture-nav .link {
@@ -1324,23 +1362,14 @@ span {
 .item-nav {
   margin-bottom: 30px;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .item-nav {
-    margin-right: 30px;
-  }
-  .item-nav:nth-child(even) {
-    margin-right: 0;
-  }
-  .item-nav:nth-child(9) {
-    margin-right: 0;
+    flex-basis: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .item-nav {
-    margin-right: 30px;
-  }
-  .item-nav:nth-child(3n) {
-    margin-right: 0;
+    flex-basis: calc((100% - 60px) / 3);
   }
 }
 .item-nav:hover {
@@ -1378,4 +1407,10 @@ span {
 
 .headin {
   margin-bottom: 4px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */

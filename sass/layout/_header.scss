@@ -3,11 +3,16 @@
     border: 1px solid #ececec;
     padding-top: 15px;
     padding-bottom: 15px;
+    margin: 0 auto;
 
     &-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+    @media screen and(min-width:1200px) {
+        max-width: 1200px;
+        border: none;
     }
 }
 
