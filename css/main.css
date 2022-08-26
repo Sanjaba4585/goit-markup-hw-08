@@ -561,6 +561,7 @@ textarea {
   .page-header {
     max-width: 1200px;
     border: none;
+    border-bottom: solid 1px #ececec;
   }
 }
 
